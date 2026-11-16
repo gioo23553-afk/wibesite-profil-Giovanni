@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="id" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1d">
+  <meta name="description" content="Website profil personal Giovanni Hernando Belva, pelajar SMK Negeri 1 Bangkinang yang tertarik pada teknologi.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c6cff'/%3E%3Ctext x='32' y='42' font-size='30' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
+  <script>document.documentElement.classList.remove('no-js')</script>
+  <title>Giovanni Hernando Belva — Profil Personal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ==================== EDIT DI SINI: WARNA WEBSITE ==================== */
+    :root {
+      --bg:#080d1d; --surface:rgba(18,28,53,.72); --surface2:#111d38;
+      --text:#edf3ff; --muted:#a5b2cc; --line:rgba(160,184,230,.16);
+      --accent:#7c6cff; --accent2:#21d4fd; --shadow:0 20px 60px rgba(0,0,0,.25);
+      --nav:rgba(8,13,29,.78);
+    }
+    body.light {
+      --bg:#f3f6ff; --surface:rgba(255,255,255,.78); --surface2:#fff;
+      --text:#17213a; --muted:#5e6b85; --line:rgba(52,75,120,.15);
+      --accent:#635bff; --accent2:#009fc2; --shadow:0 18px 50px rgba(45,65,110,.12);
+      --nav:rgba(243,246,255,.82);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.7;transition:background .3s,color .3s;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 12% 8%,rgba(124,108,255,.18),transparent 34%),radial-gradient(ellipse at 88% 35%,rgba(33,212,253,.12),transparent 30%)}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea{font:inherit}
+    button{cursor:pointer}
+    :focus-visible{outline:3px solid var(--accent2);outline-offset:4px}
+    .container{width:min(1100px,calc(100% - 40px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:50;background:var(--nav);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .navwrap{height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-weight:800;letter-spacing:-.7px;font-size:1.08rem}.brand span{color:var(--accent2)}
+    .navlinks{display:flex;align-items:center;gap:23px}
+    .navlinks a,.navlinks button{font-size:.88rem;color:var(--muted);background:none;border:0;padding:8px 0}
+    .navlinks a:hover,.navlinks a.active{color:var(--text)}
+    .navlinks a.active{box-shadow:0 2px var(--accent2)}
+    .navtools{display:flex;gap:8px;align-items:center}
+    .iconbtn,.menu-btn{width:40px;height:40px;border:1px solid var(--line);border-radius:13px;background:var(--surface);color:var(--text)}
+    .menu-btn{display:none}
+    .page{display:none;min-height:75vh}.page.active{display:block;animation:pageIn .45s ease both}
+    @keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    .hero{padding:92px 0 75px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:55px;min-height:590px}
+    .eyebrow{color:var(--accent2);font-size:.78rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+    h1{font-size:clamp(2.6rem,6vw,4.8rem);line-height:1.08;letter-spacing:-3px;margin:14px 0}
+    .gradient{background:linear-gradient(100deg,var(--accent),var(--accent2));background-clip:text;-webkit-background-clip:text;color:transparent}
+    .lead{font-size:1.08rem;color:var(--muted);max-width:620px}
+    .typing{color:var(--accent2);font-weight:700;min-height:1.8em}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 19px;border-radius:13px;border:1px solid var(--line);font-weight:700;font-size:.9rem;transition:.3s}
+    .btn.primary{background:linear-gradient(110deg,var(--accent),#368ce9);border:0;color:white;box-shadow:0 10px 28px rgba(91,105,255,.25)}
+    .btn:hover{transform:translateY(-3px)}
+    .profilebox{display:flex;flex-direction:column;align-items:center;gap:14px}
+    .avatar-ring{width:min(290px,72vw);aspect-ratio:1;padding:7px;border-radius:50%;background:conic-gradient(from 40deg,var(--accent),var(--accent2),#a78bfa,var(--accent))}
+    .avatar-inner{position:relative;width:100%;height:100%;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,#645bff,#18c7d9);display:grid;place-items:center}
+    .avatar-inner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%;opacity:0;transition:opacity .6s ease}
+    .avatar-inner.has-photo img{opacity:1}
+    .avatar-inner .initials{transition:opacity .4s}.avatar-inner.has-photo .initials{opacity:0}
+    .avatar-inner .initials{font-size:3.5rem;font-weight:800;color:white;letter-spacing:2px}
+    section.content-section{padding:65px 0}
+    .section-head{margin-bottom:28px}.section-head h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-1.3px;margin:4px 0}
+    .section-head p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:23px;backdrop-filter:blur(15px);box-shadow:var(--shadow);transition:transform .3s,border-color .3s}
+    .card:hover{transform:translateY(-6px);border-color:rgba(33,212,253,.45)}
+    .card h3{margin:0 0 8px;font-size:1.06rem}.card p{color:var(--muted);margin:0;font-size:.92rem}
+    .info-icon{font-size:1.35rem;margin-bottom:10px}
+    .skills{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .skill{margin:0 0 15px}.skilltop{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:8px}
+    .track{height:9px;background:var(--line);border-radius:20px;overflow:hidden}
+    .fill{height:100%;width:0;will-change:width;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width 1.2s ease}
+    .timeline{position:relative;margin-left:9px;padding-left:28px;border-left:2px solid var(--line)}
+    .event{position:relative;padding:0 0 28px}.event:before{content:"";position:absolute;left:-36px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 5px rgba(33,212,253,.12)}
+    .event small{color:var(--accent2);font-weight:700}.event h3{margin:3px 0}.event p{margin:0;color:var(--muted)}
+    .tags{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}.tag{font-size:.72rem;padding:5px 9px;border-radius:30px;background:rgba(124,108,255,.14);color:var(--accent2)}
+    .project-link{display:inline-block;margin-top:14px;color:var(--accent2);font-size:.86rem;font-weight:700}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    form{display:grid;gap:13px}label{font-size:.84rem;font-weight:600}
+    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface2);color:var(--text);margin-top:6px}
+    textarea{min-height:125px;resize:vertical}.form-message{font-size:.85rem;color:var(--accent2);min-height:22px}
+    .socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.socials a{padding:9px 12px;border:1px solid var(--line);border-radius:11px;color:var(--muted);font-size:.84rem}
+    .socials a:hover{color:var(--text);border-color:var(--accent2)}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.82rem}
+    .footerrow{display:flex;justify-content:space-between;gap:15px;align-items:center}
+    .backtop{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:10px;padding:8px 12px}
+    /* Halaman kisah sekolah bertema teknologi */
+    .story-hero{padding:85px 0 45px;text-align:center}
+    .story-hero h1{font-size:clamp(2.4rem,6vw,4.2rem)}
+    .story-banner{border:1px solid var(--line);border-radius:25px;padding:28px;background:linear-gradient(125deg,rgba(124,108,255,.16),rgba(33,212,253,.08)),var(--surface);position:relative;overflow:hidden}
+    .story-banner:after{content:"</>";position:absolute;right:25px;bottom:-40px;font-size:9rem;font-weight:800;color:rgba(33,212,253,.08)}
+    .story-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+    .codebox{background:#080e1e;color:#b7f5e7;border-radius:17px;padding:22px;font: .84rem/1.9 ui-monospace,monospace;overflow:auto;border:1px solid rgba(33,212,253,.2)}
+    .codebox .purple{color:#b7a8ff}.codebox .blue{color:#6bd8ff}
+    .story-steps{display:grid;gap:14px}
+    .story-step{display:flex;gap:14px;align-items:flex-start}
+    .stepno{flex:0 0 38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;font-weight:800}
+    .story-step p{color:var(--muted);margin:2px 0 0;font-size:.9rem}
+    .cursor{animation:blink 1s steps(1) infinite;color:var(--accent2)}
+    @keyframes blink{50%{opacity:0}}
+    .no-js .reveal{opacity:1;transform:none}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+    .error{color:#ff8e9b;font-size:.82rem;min-height:18px}
+    @media(max-width:800px){
+      .hero{grid-template-columns:1fr;text-align:center;padding:65px 0 45px;gap:35px}.hero .lead{margin:auto}.actions{justify-content:center}
+      .grid{grid-template-columns:1fr 1fr}.story-layout{grid-template-columns:1fr}
+      .navlinks{display:none;position:absolute;top:74px;left:0;right:0;padding:18px 22px 22px;background:var(--nav);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:8px}
+      .navlinks.open{display:flex}.navlinks a{padding:10px}.menu-btn{display:block}
+    }
+    @media(max-width:560px){
+      .container{width:min(100% - 30px,1100px)}.grid,.skills,.contact-grid{grid-template-columns:1fr}
+      .footerrow{flex-direction:column;text-align:center}.card{padding:19px}h1{letter-spacing:-1.8px}
+    }
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}.cursor{animation:none}}
+  </style>
+</head>
+<body>
+  <!-- ==================== NAVIGASI ==================== -->
+  <header class="topbar">
+    <div class="container navwrap">
+      <a class="brand" href="#profil" aria-label="Beranda Giovanni">G<span>.</span>HB</a>
+      <nav class="navlinks" id="navLinks" aria-label="Navigasi utama">
+        <a href="#profil" class="active" aria-current="page">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#keahlian">Keahlian</a>
+        <a href="#proyek">Proyek</a>
+        <a href="#kontak">Kontak</a>
+        <a href="#kisah">Kisah Sekolah</a>
+      </nav>
+      <div class="navtools">
+        <button class="iconbtn" id="themeToggle" aria-label="Ganti tema" title="Ganti tema">☀</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HALAMAN 1: PROFIL ==================== -->
+    <div class="page active" id="profil">
+      <div class="container">
+        <section class="hero" aria-labelledby="heroTitle">
+          <div class="reveal">
+            <div class="eyebrow">Halo, selamat datang di website saya</div>
+            <!-- EDIT DI SINI: Nama dan deskripsi profil -->
+            <h1 id="heroTitle">Saya <span class="gradient">Giovanni<br>Hernando Belva</span></h1>
+            <div class="typing">Saya seorang <span id="typedText"></span><span class="cursor" aria-hidden="true">|</span></div>
+            <p class="lead">Saya adalah pelajar yang tertarik dengan dunia teknologi, komputer, dan pengembangan kreativitas digital. Website ini menjadi tempat untuk mengenal diri saya dan perjalanan belajar saya.</p>
+            <div class="actions">
+              <a class="btn primary" href="#kontak">✉ Hubungi Saya</a>
+              <a class="btn" href="#proyek">⌘ Lihat Proyek</a>
+            </div>
+          </div>
+          <div class="profilebox reveal">
+            <div class="avatar-ring">
+              <div class="avatar-inner" id="avatar">
+                <span class="initials" aria-hidden="true">GHB</span>
+                <img id="profileImage" src="foto.jpg" alt="Foto profil Giovanni Hernando Belva" width="290" height="290" decoding="async" fetchpriority="high">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" id="tentang">
+          <div class="section-head reveal"><div class="eyebrow">Perkenalan</div><h2>Tentang Saya</h2><p>Sedikit cerita tentang diri saya.</p></div>
+          <div class="grid">
+            <article class="card reveal"><div class="info-icon">📍</div><h3>Lokasi</h3><p>Bangkinang, Riau, Indonesia</p></article>
+            <article class="card reveal"><div class="info-icon">🎓</div><h3>Pendidikan</h3><p>SMK Negeri 1 Bangkinang</p></article>
+            <article class="card reveal"><div class="info-icon">💡</div><h3>Minat</h3><p>Teknologi, komputer, desain, dan pemrograman.</p></article>
+          </div>
+          <div class="card reveal" style="margin-top:17px"><p>Saya senang mempelajari hal baru, mencoba ide kreatif, dan mengembangkan kemampuan di bidang teknologi. Saya percaya bahwa proses belajar, konsistensi, dan rasa ingin tahu dapat membantu saya meraih cita-cita.</p></div>
+        </section>
+
+        <section class="content-section" id="keahlian">
+          <div class="section-head reveal"><div class="eyebrow">Kemampuan</div><h2>Keahlian Saya</h2><p>Daftar kemampuan yang sedang saya pelajari dan kembangkan.</p></div>
+          <div class="card reveal">
+            <!-- EDIT DI SINI: Nama skill dan angka persentase hanya indikator belajar -->
+            <div class="skills">
+              <div>
+                <div class="skill"><div class="skilltop"><span>HTML & CSS</span><b>75%</b></div><div class="track"><div class="fill" data-level="75"></div></div></div>
+                <div class="skill"><div class="skilltop"><span>JavaScript</span><b>55%</b></div><div class="track"><div class="fill" data-level="55"></div></div></div>
+              </div>
+              <div>
+                <div class="skill"><div class="skilltop"><span>Desain Digital</span><b>60%</b></div><div class="track"><div class="fill" data-level="60"></div></div></div>
+                <div class="skill"><div class="skilltop"><span>Komputer & Teknologi</span><b>70%</b></div><div class="track"><div class="fill" data-level="70"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" id="pengalaman">
+          <div class="section-head reveal"><div class="eyebrow">Perjalanan</div><h2>Pendidikan & Pengalaman</h2></div>
+          <div class="card reveal">
+            <div class="timeline">
+              <div class="event"><small>SAAT INI</small><h3>SMK Negeri 1 Bangkinang</h3><p>Menempuh pendidikan kejuruan, memperluas wawasan, dan mengembangkan keterampilan untuk masa depan.</p></div>
+              <div class="event"><small>PROSES BELAJAR</small><h3>Mengenal Dunia Teknologi</h3><p>Mulai mengeksplorasi komputer, aplikasi digital, dan dasar-dasar pembuatan website.</p></div>
+              <div class="event"><small>LANGKAH BERIKUTNYA</small><h3>Terus Berkembang</h3><p>Berusaha membuat karya dan pengalaman baru melalui proses belajar.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" id="proyek">
+          <div class="section-head reveal"><div class="eyebrow">Karya digital</div><h2>Proyek Pilihan</h2><p>Contoh proyek yang dapat kamu ganti dengan hasil karyamu.</p></div>
+          <div class="grid">
+            <!-- EDIT DI SINI: Ganti judul, deskripsi, tag, dan tautan proyek -->
+            <article class="card reveal"><div class="info-icon">💻</div><h3>Website Profil</h3><p>Website personal untuk memperkenalkan identitas, minat, dan karya.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div><a class="project-link" href="#kontak">Lihat detail →</a></article>
+            <article class="card reveal"><div class="info-icon">🧮</div><h3>Aplikasi Kalkulator</h3><p>Proyek latihan membuat aplikasi sederhana dengan tampilan interaktif.</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">UI</span></div><a class="project-link" href="#kontak">Lihat detail →</a></article>
+            <article class="card reveal"><div class="info-icon">🛒</div><h3>Aplikasi Kasir</h3><p>Konsep aplikasi pencatatan transaksi dan pengelolaan barang.</p><div class="tags"><span class="tag">Web</span><span class="tag">Database</span></div><a class="project-link" href="#kontak">Lihat detail →</a></article>
+          </div>
+        </section>
+
+        <section class="content-section" id="kontak">
+          <div class="section-head reveal"><div class="eyebrow">Mari terhubung</div><h2>Hubungi Saya</h2><p>Kirim pesan melalui formulir atau kunjungi media sosial saya.</p></div>
+          <div class="contact-grid">
+            <div class="card reveal">
+              <form id="contactForm" novalidate>
+                <label for="name">Nama<input id="name" name="name" autocomplete="name" required placeholder="Nama kamu"></label>
+                <label for="email">Email<input id="email" name="email" type="email" autocomplete="email" required placeholder="nama@email.com"></label>
+                <label for="message">Pesan<textarea id="message" name="message" required minlength="5" placeholder="Tulis pesan kamu..."></textarea></label>
+                <div class="error" id="formError" role="alert"></div>
+                <button class="btn primary" type="submit">Kirim Pesan →</button>
+                <div class="form-message" id="formSuccess" role="status"></div>
+              </form>
+            </div>
+            <div class="card reveal">
+              <h3>Temukan saya di</h3><p>Silakan hubungi atau kunjungi tautan berikut.</p>
+              <!-- EDIT DI SINI: Ganti URL sosial media dengan akun milikmu -->
+              <div class="socials">
+                <a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a>
+                <a href="mailto:emailkamu@example.com">Email ↗</a>
+              </div>
+              <!-- CATATAN: formulir hanya validasi di browser. Hubungkan ke layanan backend/formulir online agar pesan benar-benar terkirim. -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- ==================== HALAMAN 2: KISAH MASUK SMK ==================== -->
+    <div class="page" id="kisah">
+      <div class="container">
+        <section class="story-hero">
+          <div class="eyebrow">Catatan perjalanan Giovanni</div>
+          <h1>Awal Cerita di <span class="gradient">SMK Negeri 1 Bangkinang</span></h1>
+          <p class="lead" style="margin:0 auto">Perjalanan baru, teman baru, pengalaman baru, dan semangat untuk mengenal dunia teknologi.</p>
+        </section>
+        <section class="content-section">
+          <div class="story-banner reveal">
+            <div class="eyebrow">Bab 01 · Langkah baru</div>
+            <h2>Memulai perjalanan menuju masa depan</h2>
+            <p class="lead">Memasuki SMK Negeri 1 Bangkinang menjadi salah satu langkah penting dalam perjalanan pendidikan saya. Ada rasa senang, semangat, dan sedikit rasa gugup saat membayangkan lingkungan sekolah yang baru.</p>
+          </div>
+        </section>
+        <section class="content-section">
+          <div class="section-head reveal"><div class="eyebrow">Cerita saya</div><h2>Dari hari pertama hingga mulai beradaptasi</h2></div>
+          <div class="story-layout">
+            <article class="card reveal">
+              <h3>Hari pertama yang berkesan</h3>
+              <p>Ketika pertama kali memasuki lingkungan SMK Negeri 1 Bangkinang, saya menyadari bahwa perjalanan sekolah kali ini akan membawa banyak pengalaman. Saya mulai mengenal suasana sekolah, guru, teman-teman baru, serta aturan dan kegiatan yang ada.</p>
+              <p style="margin-top:14px">Seiring waktu, saya belajar untuk beradaptasi, berani bertanya, bekerja sama, dan mengikuti pembelajaran dengan lebih percaya diri. Setiap kegiatan menjadi kesempatan untuk menambah pengetahuan dan pengalaman.</p>
+              <p style="margin-top:14px">Saya juga semakin tertarik dengan teknologi. Melalui pembelajaran dan latihan, saya ingin memahami bagaimana komputer, aplikasi, dan website dibuat serta digunakan untuk membantu kehidupan sehari-hari.</p>
+              <!-- EDIT DI SINI: tambahkan pengalaman pribadi, nama jurusan, teman, guru, atau kejadian yang benar-benar kamu alami -->
+            </article>
+            <aside class="codebox reveal" aria-label="Ilustrasi kode perjalanan belajar">
+              <div><span class="purple">const</span> perjalanan = {</div>
+              <div>&nbsp; sekolah: <span class="blue">"SMK Negeri 1 Bangkinang"</span>,</div>
+              <div>&nbsp; tujuan: <span class="blue">"Masa depan"</span>,</div>
+              <div>&nbsp; semangat: <span class="blue">"Tidak berhenti belajar"</span>,</div>
+              <div>&nbsp; fokus: [</div>
+              <div>&nbsp;&nbsp; <span class="blue">"Teknologi"</span>,</div>
+              <div>&nbsp;&nbsp; <span class="blue">"Kreativitas"</span>,</div>
+              <div>&nbsp;&nbsp; <span class="blue">"Pengalaman"</span></div>
+              <div>&nbsp; ]</div>
+              <div>};</div>
+              <br>
+              <div><span class="purple">while</span> (masih_ada_waktu) {</div>
+              <div>&nbsp; belajar();</div>
+              <div>&nbsp; mencoba_hal_baru();</div>
+              <div>&nbsp; berkembang();</div>
+              <div>}</div>
+            </aside>
+          </div>
+        </section>
+        <section class="content-section">
+          <div class="section-head reveal"><div class="eyebrow">Tahapan perjalanan</div><h2>Hal yang ingin saya capai</h2></div>
+          <div class="card reveal">
+            <div class="story-steps">
+              <div class="story-step"><div class="stepno">01</div><div><h3>Beradaptasi</h3><p>Mengenal lingkungan sekolah, guru, teman, dan budaya belajar yang baru.</p></div></div>
+              <div class="story-step"><div class="stepno">02</div><div><h3>Mempelajari teknologi</h3><p>Memahami komputer, perangkat lunak, pemrograman, dan perkembangan teknologi.</p></div></div>
+              <div class="story-step"><div class="stepno">03</div><div><h3>Membuat karya</h3><p>Mengubah materi yang dipelajari menjadi proyek sederhana yang bermanfaat.</p></div></div>
+              <div class="story-step"><div class="stepno">04</div><div><h3>Meraih cita-cita</h3><p>Terus berusaha, menjaga semangat, dan mempersiapkan diri untuk masa depan.</p></div></div>
+            </div>
+          </div>
+        </section>
+        <section class="content-section">
+          <div class="story-banner reveal">
+            <div class="eyebrow">Bab berikutnya · Masa depan</div>
+            <h2>Perjalanan ini masih panjang.</h2>
+            <p class="lead">Saya ingin menjadikan masa sekolah sebagai kesempatan untuk belajar, mencoba, gagal, memperbaiki diri, dan menghasilkan sesuatu yang membanggakan.</p>
+            <a class="btn primary" href="#profil">Kembali ke Profil ↗</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footerrow">
+      <span>© <span id="year"></span> Giovanni Hernando Belva. Dibuat dengan semangat belajar.</span>
+      <button class="backtop" id="backTop">↑ Kembali ke atas</button>
+    </div>
+  </footer>
+
+  <script>
+    'use strict';
+    const $ = (sel, root = document) => root.querySelector(sel);
+    const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const store = {
+      get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+      set(k, v) { try { localStorage.setItem(k, v); } catch {} }
+    };
+
+    // ==================== FOTO PROFIL (foto.jpg, satu folder dengan index.html) ====================
+    const avatar = $('#avatar');
+    const photo = $('#profileImage');
+    const showPhoto = () => photo.naturalWidth > 0 ? avatar.classList.add('has-photo') : photo.remove();
+    photo.addEventListener('load', showPhoto);
+    photo.addEventListener('error', () => photo.remove());          // jika foto.jpg tidak ada, inisial "GHB" tetap tampil
+    if (photo.complete) showPhoto();
+
+    // ==================== NAVIGASI & ROUTER HALAMAN ====================
+    const pages = $$('.page');
+    const navLinks = $$('.navlinks a');
+    const nav = $('#navLinks');
+    const menuBtn = $('#menuBtn');
+    const TITLES = { profil: 'Giovanni Hernando Belva — Profil Personal', kisah: 'Kisah Sekolah — Giovanni Hernando Belva' };
+    let currentPage = null;
+
+    function setMenu(open) {
+      nav.classList.toggle('open', open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.textContent = open ? '✕' : '☰';
+    }
+    function setActiveLink(id) {
+      navLinks.forEach(a => {
+        const on = a.hash === '#' + id;
+        a.classList.toggle('active', on);
+        on ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current');
+      });
+    }
+    function setPage(id) {
+      if (id === currentPage) return false;
+      currentPage = id;
+      pages.forEach(p => p.classList.toggle('active', p.id === id));
+      document.title = TITLES[id];
+      setActiveLink(id === 'kisah' ? 'kisah' : 'profil');
+      return true;
+    }
+    function route() {
+      const id = decodeURIComponent(location.hash.slice(1)) || 'profil';
+      const target = document.getElementById(id);
+      const changed = setPage(id === 'kisah' ? 'kisah' : 'profil');
+      setMenu(false);
+      const behavior = changed || reducedMotion ? 'instant' : 'smooth';
+      requestAnimationFrame(() => {
+        if (target && id !== 'kisah' && id !== 'profil') target.scrollIntoView({ behavior });
+        else if (changed || id === 'profil' || id === 'kisah') window.scrollTo({ top: 0, behavior });
+      });
+    }
+    addEventListener('hashchange', route);
+    route();
+
+    menuBtn.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+    addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+    document.addEventListener('click', e => { if (!e.target.closest('.topbar')) setMenu(false); });
+    // klik tautan yang hash-nya sama dengan sekarang tidak memicu hashchange, jadi ditangani manual
+    document.addEventListener('click', e => {
+      const a = e.target.closest('a[href^="#"]');
+      if (a && a.hash === location.hash) { e.preventDefault(); route(); }
+    });
+
+    // Menandai menu aktif saat scroll (scroll-spy) pada halaman profil
+    const spy = new IntersectionObserver(entries => {
+      if (currentPage !== 'profil') return;
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        const id = en.target.id || 'profil';
+        if (navLinks.some(a => a.hash === '#' + id)) setActiveLink(id);
+      });
+    }, { rootMargin: '-35% 0px -60% 0px' });
+    $$('#profil .hero, #profil .content-section').forEach(el => spy.observe(el));
+
+    // ==================== MODE GELAP / TERANG ====================
+    const themeToggle = $('#themeToggle');
+    const themeMeta = $('meta[name="theme-color"]');
+    const lightQuery = matchMedia('(prefers-color-scheme: light)');
+    function setTheme(theme) {
+      const light = theme === 'light';
+      document.body.classList.toggle('light', light);
+      themeToggle.textContent = light ? '☾' : '☀';
+      themeToggle.setAttribute('aria-label', light ? 'Aktifkan mode gelap' : 'Aktifkan mode terang');
+      themeMeta.content = light ? '#f3f6ff' : '#080d1d';
+    }
+    setTheme(store.get('giovanni-theme') || (lightQuery.matches ? 'light' : 'dark'));
+    themeToggle.addEventListener('click', () => {
+      const next = document.body.classList.contains('light') ? 'dark' : 'light';
+      setTheme(next); store.set('giovanni-theme', next);
+    });
+    lightQuery.addEventListener?.('change', e => { if (!store.get('giovanni-theme')) setTheme(e.matches ? 'light' : 'dark'); });
+
+    // ==================== EFEK MENGETIK ====================
+    const roles = ['Pelajar', 'Pecinta Teknologi', 'Calon Web Developer', 'Kreator Digital'];
+    const typedText = $('#typedText');
+    let roleIndex = 0, charIndex = 0, deleting = false;
+    function typeLoop() {
+      const word = roles[roleIndex];
+      typedText.textContent = word.slice(0, charIndex);
+      let delay = deleting ? 48 : 95;
+      if (!deleting && charIndex === word.length) { deleting = true; delay = 1200; }
+      else if (deleting && charIndex === 0) { deleting = false; roleIndex = (roleIndex + 1) % roles.length; delay = 350; }
+      else charIndex += deleting ? -1 : 1;
+      setTimeout(typeLoop, delay);
+    }
+    reducedMotion ? typedText.textContent = roles[0] : typeLoop();
+
+    // ==================== ANIMASI SAAT MUNCUL DI LAYAR (reveal + bar keahlian) ====================
+    const io = new IntersectionObserver(entries => entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('visible');
+      $$('.fill', en.target).forEach(f => f.style.width = f.dataset.level + '%');
+      io.unobserve(en.target);
+    }), { threshold: .12 });
+    $$('.reveal').forEach(el => reducedMotion ? (el.classList.add('visible'), $$('.fill', el).forEach(f => f.style.width = f.dataset.level + '%')) : io.observe(el));
+
+    // ==================== FORM KONTAK ====================
+    const form = $('#contactForm'), formError = $('#formError'), formSuccess = $('#formSuccess');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = form.name.value.trim(), email = form.email.value.trim(), message = form.message.value.trim();
+      formError.textContent = formSuccess.textContent = '';
+      if (!name || !email || !message) { formError.textContent = 'Semua kolom wajib diisi.'; return; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { formError.textContent = 'Format email belum benar. Periksa kembali email kamu.'; return; }
+      if (message.length < 5) { formError.textContent = 'Pesan minimal terdiri dari 5 karakter.'; return; }
+      formSuccess.textContent = `Terima kasih, ${name}! Pesan berhasil divalidasi. Hubungkan form ke layanan pengiriman agar pesan diterima.`;
+      form.reset();
+    });
+
+    // ==================== LAIN-LAIN ====================
+    $('#backTop').addEventListener('click', () => scrollTo({ top: 0, behavior: reducedMotion ? 'instant' : 'smooth' }));
+    $('#year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
